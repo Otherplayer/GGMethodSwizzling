@@ -33,10 +33,6 @@
     
     
     
-//    pod 'JRSwizzle', '~> 1.0'
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

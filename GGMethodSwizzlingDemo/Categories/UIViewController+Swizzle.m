@@ -58,6 +58,13 @@
     
     NSError *error = nil;
     [self jr_swizzleMethod:@selector(viewWillAppear:) withMethod:@selector(xxx_viewWillAppear:) error:&error];
+    if (error) {
+        NSLog(@"Swizzle Error: %@",error);
+    }
+    
+    
+    
+    
 }
 
 #pragma mark - Method Swizzling
