@@ -13,9 +13,13 @@
 		6316D4D41BC6130E008B8794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6316D4D21BC6130E008B8794 /* Main.storyboard */; };
 		6316D4D61BC6130E008B8794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6316D4D51BC6130E008B8794 /* Assets.xcassets */; };
 		6316D4D91BC6130E008B8794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6316D4D71BC6130E008B8794 /* LaunchScreen.storyboard */; };
+		6316D4EB1BC6164E008B8794 /* NSArray+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6316D4E81BC6164E008B8794 /* NSArray+Swizzle.m */; settings = {ASSET_TAGS = (); }; };
+		6316D4EC1BC6164E008B8794 /* UIViewController+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6316D4EA1BC6164E008B8794 /* UIViewController+Swizzle.m */; settings = {ASSET_TAGS = (); }; };
+		8B43AF5651189EEA6878BA80 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6172B628A039A9252CDAB473 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6172B628A039A9252CDAB473 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6316D4C61BC6130E008B8794 /* GGMethodSwizzlingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGMethodSwizzlingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6316D4CA1BC6130E008B8794 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6316D4CC1BC6130E008B8794 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +30,12 @@
 		6316D4D51BC6130E008B8794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6316D4D81BC6130E008B8794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6316D4DA1BC6130E008B8794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6316D4E71BC6164E008B8794 /* NSArray+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Swizzle.h"; sourceTree = "<group>"; };
+		6316D4E81BC6164E008B8794 /* NSArray+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Swizzle.m"; sourceTree = "<group>"; };
+		6316D4E91BC6164E008B8794 /* UIViewController+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzle.h"; sourceTree = "<group>"; };
+		6316D4EA1BC6164E008B8794 /* UIViewController+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzle.m"; sourceTree = "<group>"; };
+		948EAB50E49677EC71A693BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D6CF4BDF1A324D20334AC42A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B43AF5651189EEA6878BA80 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		108B938EAE689498EC0671ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6CF4BDF1A324D20334AC42A /* Pods.debug.xcconfig */,
+				948EAB50E49677EC71A693BF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6316D4BD1BC6130E008B8794 = {
 			isa = PBXGroup;
 			children = (
 				6316D4C81BC6130E008B8794 /* GGMethodSwizzlingDemo */,
 				6316D4C71BC6130E008B8794 /* Products */,
+				108B938EAE689498EC0671ED /* Pods */,
+				868D1455DCD607454FB8A642 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +80,7 @@
 		6316D4C81BC6130E008B8794 /* GGMethodSwizzlingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6316D4E61BC61631008B8794 /* Categories */,
 				6316D4CC1BC6130E008B8794 /* AppDelegate.h */,
 				6316D4CD1BC6130E008B8794 /* AppDelegate.m */,
 				6316D4CF1BC6130E008B8794 /* ViewController.h */,
@@ -79,6 +102,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6316D4E61BC61631008B8794 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6316D4E71BC6164E008B8794 /* NSArray+Swizzle.h */,
+				6316D4E81BC6164E008B8794 /* NSArray+Swizzle.m */,
+				6316D4E91BC6164E008B8794 /* UIViewController+Swizzle.h */,
+				6316D4EA1BC6164E008B8794 /* UIViewController+Swizzle.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		868D1455DCD607454FB8A642 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6172B628A039A9252CDAB473 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6316D4DD1BC6130E008B8794 /* Build configuration list for PBXNativeTarget "GGMethodSwizzlingDemo" */;
 			buildPhases = (
+				267D3227F3CE69F1C3F8BAB9 /* Check Pods Manifest.lock */,
 				6316D4C21BC6130E008B8794 /* Sources */,
 				6316D4C31BC6130E008B8794 /* Frameworks */,
 				6316D4C41BC6130E008B8794 /* Resources */,
+				C4657C62172F9F84AF1C306B /* Embed Pods Frameworks */,
+				90A2250EA9E5E2D0C3369E7C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +189,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		267D3227F3CE69F1C3F8BAB9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90A2250EA9E5E2D0C3369E7C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4657C62172F9F84AF1C306B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6316D4C21BC6130E008B8794 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6316D4EC1BC6164E008B8794 /* UIViewController+Swizzle.m in Sources */,
 				6316D4D11BC6130E008B8794 /* ViewController.m in Sources */,
 				6316D4CE1BC6130E008B8794 /* AppDelegate.m in Sources */,
 				6316D4CB1BC6130E008B8794 /* main.m in Sources */,
+				6316D4EB1BC6164E008B8794 /* NSArray+Swizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +356,11 @@
 		};
 		6316D4DE1BC6130E008B8794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6CF4BDF1A324D20334AC42A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GGMethodSwizzlingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Otherplayer.GGMethodSwizzlingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,9 +369,11 @@
 		};
 		6316D4DF1BC6130E008B8794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948EAB50E49677EC71A693BF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GGMethodSwizzlingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Otherplayer.GGMethodSwizzlingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +399,7 @@
 				6316D4DF1BC6130E008B8794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
